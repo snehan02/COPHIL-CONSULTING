@@ -38,15 +38,14 @@ export default async function BlogPostPage({ params }: BlogPostProps) {
     return (
         <div className="flex min-h-screen flex-col">
             <Navbar />
+            <div className="px-6 py-3 lg:px-8">
+                <Link href="/blog" className="text-sm font-medium text-primary hover:underline inline-flex items-center">
+                    <ArrowLeft className="mr-2 h-4 w-4" /> Back to Blog
+                </Link>
+            </div>
             <main className="flex-1">
-                <Section>
+                <Section className="pt-6 md:pt-8">
                     <div className="mx-auto max-w-3xl">
-                        <div className="mb-8">
-                            <Link href="/blog" className="text-sm font-medium text-primary hover:underline flex items-center">
-                                <ArrowLeft className="mr-2 h-4 w-4" /> Back to Blog
-                            </Link>
-                        </div>
-
                         <span className="text-base font-semibold leading-7 text-primary">{post.category}</span>
                         <h1 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                             {post.title}

@@ -24,10 +24,15 @@ export function Navbar() {
                 aria-label="Global"
             >
                 <div className="flex lg:flex-1">
-                    <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
+                    <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2 group">
                         <span className="sr-only">Cophil Consulting</span>
-                        <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent font-serif tracking-wide" style={{ fontFamily: 'var(--font-playfair)' }}>
-                            Cophil
+                        <span className="relative flex flex-col leading-none">
+                            <span className="text-2xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] animate-[shimmer_3s_linear_infinite]">
+                                Cophil
+                            </span>
+                            <span className="text-[9px] font-semibold uppercase tracking-[0.25em] text-zinc-400 dark:text-zinc-500 -mt-0.5">
+                                Consulting
+                            </span>
                         </span>
                     </Link>
                 </div>
@@ -68,9 +73,16 @@ export function Navbar() {
             >
                 <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-zinc-900/10 dark:bg-black dark:ring-zinc-50/10">
                     <div className="flex items-center justify-between">
-                        <Link href="/" className="-m-1.5 p-1.5">
+                        <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-1.5">
                             <span className="sr-only">Cophil Consulting</span>
-                            <span className="text-xl font-bold">Cophil</span>
+                            <span className="relative flex flex-col leading-none">
+                                <span className="text-xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">
+                                    Cophil
+                                </span>
+                                <span className="text-[8px] font-semibold uppercase tracking-[0.25em] text-zinc-400 -mt-0.5">
+                                    Consulting
+                                </span>
+                            </span>
                         </Link>
                         <button
                             type="button"

@@ -15,7 +15,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter); 
+  --font-sans: var(--font-inter);
   --font-body: var(--font-open-sans);
 
   /* Brand Colors */
@@ -23,7 +23,7 @@
   --color-primary-light: #112240;
   --color-accent: #64ffda;
   --color-secondary: #f6ad55;
-  
+
   /* Extended Colors for UI */
   --color-navy: #0a192f;
   --color-teal: #64ffda;
@@ -36,6 +36,21 @@ body {
   font-family: var(--font-body);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-sans);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+
+  100% {
+    background-position: -200% center;
+  }
 }

@@ -15,11 +15,11 @@ export default function Home() {
       <main className="flex-1">
         {/* Hero Section */}
         <div className="relative isolate overflow-hidden bg-background lg:pb-20">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8 pb-24 sm:pb-32 lg:flex lg:pb-10 lg:items-center">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8 pb-24 sm:pb-32 lg:flex lg:pb-10 lg:items-start pt-8">
             <FadeIn className="mx-auto max-w-2xl lg:mx-0 lg:max-w-xl lg:flex-shrink-0" delay={0.2}>
-              <h1 className="mt-6 text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
+              <h1 className="mt-0 text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
                 AI-Driven Recruitment Agency <br className="hidden lg:block" />
-                <span className="text-primary">India & GCC</span>
+                <span className="text-primary">India</span>
               </h1>
               <p className="mt-6 text-lg leading-8 text-zinc-600 dark:text-zinc-300">
                 Authentic Talent Solutions with Human Touch - from freshers to enterprise leaders.
@@ -27,11 +27,9 @@ export default function Home() {
               </p>
               <div className="mt-10 flex items-center gap-x-6">
                 <Button size="lg" className="rounded-full">
-                  Find Talent <ArrowRight className="ml-2 h-4 w-4" />
+                  Find Jobs <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
-                <Button variant="outline" size="lg" className="rounded-full">
-                  Find Jobs
-                </Button>
+
               </div>
             </FadeIn>
             <FadeIn className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32" delay={0.4}>
@@ -127,6 +125,59 @@ export default function Home() {
           </FadeIn>
         </Section>
 
+        {/* Testimonials Section */}
+        <Section className="bg-zinc-50 dark:bg-zinc-900/50">
+          <FadeIn>
+            <div className="mx-auto max-w-2xl text-center mb-16">
+              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                What Our Clients Say
+              </h2>
+              <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-400">
+                Helping companies find the right talent to drive their business forward.
+              </p>
+            </div>
+          </FadeIn>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            {[
+              {
+                quote: "Cophil helped us find tech talent who don't just list skills, but actually deliver on complex projects.",
+                author: "Salil Dhawan",
+                role: "Director & CEO",
+                company: "Appening Infotech",
+              },
+              {
+                quote: "Cophil made the hiring process simple and brought us genuine candidates",
+                author: "Kunal Chauhan",
+                role: "Founder",
+                company: "Om Industries",
+              }
+            ].map((testimonial, index) => (
+              <FadeIn key={testimonial.author} delay={0.2 * (index + 1)}>
+                <Card className="p-8 h-full flex flex-col justify-between">
+                  <div>
+                    <div className="flex gap-1 mb-4 text-primary">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <svg key={star} className="h-5 w-5 fill-current" viewBox="0 0 20 20">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <p className="text-lg italic text-zinc-700 dark:text-zinc-300 mb-6">
+                      "{testimonial.quote}"
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-foreground">{testimonial.author}</h4>
+                    <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                      {testimonial.role}, {testimonial.company}
+                    </p>
+                  </div>
+                </Card>
+              </FadeIn>
+            ))}
+          </div>
+        </Section>
+
         {/* CTA Section */}
         <Section className="bg-primary text-white">
           <FadeIn className="mx-auto max-w-2xl text-center">
@@ -140,9 +191,7 @@ export default function Home() {
               <Button variant="secondary" size="lg" className="rounded-full text-white">
                 Get Started
               </Button>
-              <Link href="/contact" className="text-sm font-semibold leading-6 text-white hover:text-zinc-200">
-                Contact Sales <span aria-hidden="true">→</span>
-              </Link>
+
             </div>
           </FadeIn>
         </Section>

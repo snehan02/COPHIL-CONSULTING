@@ -38,7 +38,7 @@ export default async function BlogPostPage({ params }: BlogPostProps) {
     return (
         <div className="flex min-h-screen flex-col">
             <Navbar />
-            <div className="px-6 py-3 lg:px-8">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
                 <Link href="/blog" className="text-sm font-medium text-primary hover:underline inline-flex items-center">
                     <ArrowLeft className="mr-2 h-4 w-4" /> Back to Blog
                 </Link>
@@ -47,10 +47,10 @@ export default async function BlogPostPage({ params }: BlogPostProps) {
                 <Section className="pt-6 md:pt-8">
                     <div className="mx-auto max-w-3xl">
                         <span className="text-base font-semibold leading-7 text-primary">{post.category}</span>
-                        <h1 className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                        <h1 className="mt-2 text-2xl font-bold tracking-tight text-foreground sm:text-3xl lg:text-4xl">
                             {post.title}
                         </h1>
-                        <div className="mt-6 flex items-center gap-x-4 border-b border-zinc-200 dark:border-zinc-800 pb-8 mb-8">
+                        <div className="mt-6 flex items-center gap-x-4 border-b border-zinc-200 pb-8 mb-8">
                             <div className="text-sm leading-6">
                                 <p className="font-semibold text-foreground">
                                     Cophil Editorial Team
@@ -62,7 +62,7 @@ export default async function BlogPostPage({ params }: BlogPostProps) {
                         </div>
 
                         <div
-                            className="prose prose-lg dark:prose-invert"
+                            className="prose prose-sm sm:prose-base lg:prose-lg max-w-none"
                             dangerouslySetInnerHTML={{ __html: post.content }}
                         />
                     </div>

@@ -72,7 +72,7 @@ export default function ServicesPage() {
                                         ))}
                                     </ul>
                                     <div className="mt-auto">
-                                        <Link href="/contact">
+                                        <Link href="https://forms.gle/3wEEaevtSCppRQbj8" target="_blank" rel="noopener noreferrer">
                                             <Button variant="outline" className="w-full">Get Started</Button>
                                         </Link>
                                     </div>

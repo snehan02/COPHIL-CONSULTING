@@ -23,8 +23,13 @@ export function Navbar() {
                 aria-label="Global"
             >
                 <div className="flex lg:flex-1">
-                    <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2 group">
+                    <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3 group">
                         <span className="sr-only">Cophil Consulting</span>
+                        <img
+                            src="/logo.png"
+                            alt="Cophil Consulting Logo"
+                            className="h-10 w-auto transition-transform duration-300 group-hover:scale-110"
+                        />
                         <span className="relative flex flex-col leading-none">
                             <span className="text-2xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] animate-[shimmer_3s_linear_infinite]">
                                 Cophil
@@ -35,6 +40,7 @@ export function Navbar() {
                         </span>
                     </Link>
                 </div>
+
 
                 {/* Mobile hamburger */}
                 <div className="flex items-center gap-2 lg:hidden">
@@ -68,7 +74,12 @@ export function Navbar() {
             <div className={cn("lg:hidden", mobileMenuOpen ? "fixed inset-0 z-50" : "hidden")}>
                 <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-zinc-900/10">
                     <div className="flex items-center justify-between">
-                        <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-1.5" onClick={() => setMobileMenuOpen(false)}>
+                        <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2.5" onClick={() => setMobileMenuOpen(false)}>
+                            <img
+                                src="/logo.png"
+                                alt="Cophil Consulting Logo"
+                                className="h-8 w-auto"
+                            />
                             <span className="relative flex flex-col leading-none">
                                 <span className="text-xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary">
                                     Cophil
@@ -78,6 +89,7 @@ export function Navbar() {
                                 </span>
                             </span>
                         </Link>
+
                         <button
                             type="button"
                             className="-m-2.5 rounded-md p-2.5 text-zinc-700"

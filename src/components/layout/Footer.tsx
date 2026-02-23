@@ -27,6 +27,7 @@ export function Footer() {
                                 Consulting
                             </span>
                         </div>
+
                         <p className="text-sm leading-6 text-zinc-300">
                             AI-Driven Recruitment for India &amp; GCCs.<br />
                             Authentic talent with human touch.

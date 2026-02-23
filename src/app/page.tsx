@@ -190,9 +190,11 @@ export default function Home() {
               Join hundreds of companies finding the best talent with Cophil Consulting.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button variant="secondary" size="lg" className="rounded-full text-white">
-                Get Started
-              </Button>
+              <Link href="https://forms.gle/3wEEaevtSCppRQbj8" target="_blank" rel="noopener noreferrer">
+                <Button variant="secondary" size="lg" className="rounded-full text-white">
+                  Get Started
+                </Button>
+              </Link>
             </div>
           </FadeIn>
         </Section>

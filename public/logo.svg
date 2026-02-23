@@ -1,0 +1,31 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Central Globe -->
+  <circle cx="100" cy="100" r="38" fill="white" stroke="#1E3A8A" stroke-width="2.5"/>
+  <!-- Latitude/Longitude lines -->
+  <path d="M62 100H138" stroke="#1E3A8A" stroke-width="1.5"/>
+  <path d="M100 62V138" stroke="#1E3A8A" stroke-width="1.5"/>
+  <ellipse cx="100" cy="100" rx="15" ry="38" stroke="#1E3A8A" stroke-width="1.5"/>
+  <ellipse cx="100" cy="100" rx="38" ry="15" stroke="#1E3A8A" stroke-width="1.5"/>
+
+  <!-- 5 Circular Arrow System -->
+  
+  <!-- 1. Top Arrow - Cyan (Pointing UP) -->
+  <path d="M100 45C118 45 133 55 142 70" stroke="#0891B2" stroke-width="9" stroke-linecap="round"/>
+  <path d="M100 45L110 35M100 45L110 55" stroke="#0891B2" stroke-width="9" stroke-linecap="round"/>
+  
+  <!-- 2. Right Arrow - Dark Blue (Pointing DOWN) -->
+  <path d="M155 100C155 120 145 138 130 150" stroke="#1E3A8A" stroke-width="9" stroke-linecap="round"/>
+  <path d="M155 100L165 110M155 100L145 110" stroke="#1E3A8A" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- 3. Bottom Right Arrow - Gold (Pointing LEFT) -->
+  <path d="M110 155C95 165 75 165 60 155" stroke="#B45309" stroke-width="9" stroke-linecap="round"/>
+  <path d="M110 155L100 165M110 155L100 145" stroke="#B45309" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- 4. Bottom Left Arrow - Blue (Pointing UP) -->
+  <path d="M45 120C45 100 55 82 70 70" stroke="#2563EB" stroke-width="9" stroke-linecap="round"/>
+  <path d="M45 120L35 110M45 120L55 110" stroke="#2563EB" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- 5. Top Left Arrow - Gold (Pointing RIGHT) -->
+  <path d="M70 50C80 45 90 45 100 45" stroke="#B45309" stroke-width="9" stroke-linecap="round"/>
+  <path d="M70 50L80 40M70 50L80 60" stroke="#B45309" stroke-width="9" stroke-linecap="round"/>
+</svg>

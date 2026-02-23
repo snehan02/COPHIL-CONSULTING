@@ -20,7 +20,11 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Cophil Consulting | Best IT Staffing Partner with Human Touch",
   description: "Future of Tech Hiring + Fresher Tech Hiring India + Intern Hiring Support for Startups & Enterprises.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
+
 
 export default function RootLayout({
   children,

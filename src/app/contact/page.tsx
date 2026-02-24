@@ -44,24 +44,24 @@ export default function ContactPage() {
                 </Section>
 
                 <Section className="py-12">
-                    <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 text-center sm:grid-cols-2 lg:max-w-none lg:grid-cols-2">
-                            <Card className="p-8">
+                    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-6 text-center sm:grid-cols-2 lg:max-w-none lg:grid-cols-2">
+                            <Card className="p-6 sm:p-8">
                                 <h3 className="text-lg font-semibold text-foreground">Phone</h3>
-                                <p className="mt-2 text-zinc-600 dark:text-zinc-400">
+                                <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
                                     Available Mon-Fri, 9am-6pm IST
                                 </p>
-                                <p className="mt-4 text-xl font-bold text-primary">
-                                    <a href="tel:+917972820459">+91-7972820459</a>
+                                <p className="mt-4 text-lg sm:text-xl font-bold text-primary break-words">
+                                    <a href="tel:+917972820459" className="hover:underline">+91-7972820459</a>
                                 </p>
                             </Card>
-                            <Card className="p-8">
+                            <Card className="p-6 sm:p-8">
                                 <h3 className="text-lg font-semibold text-foreground">Email</h3>
-                                <p className="mt-2 text-zinc-600 dark:text-zinc-400">
+                                <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
                                     We usually reply within 24 hours
                                 </p>
-                                <p className="mt-4 text-xl font-bold text-primary">
-                                    <a href="mailto:support@cophilconsulting.com">support@cophilconsulting.com</a>
+                                <p className="mt-4 text-base sm:text-xl font-bold text-primary break-words px-2">
+                                    <a href="mailto:support@cophilconsulting.com" className="hover:underline">support@cophilconsulting.com</a>
                                 </p>
                             </Card>
                         </div>
@@ -70,8 +70,8 @@ export default function ContactPage() {
 
                 <Section>
                     <div className="mx-auto max-w-xl">
-                        <Card className="p-8">
-                            <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                        <Card className="p-6 sm:p-8">
+                            <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-semibold leading-6 text-foreground">
                                         Name

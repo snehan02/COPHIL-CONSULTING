@@ -17,11 +17,11 @@ export default function Home() {
         <div className="relative isolate overflow-hidden bg-background">
           <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16 sm:py-24 lg:py-20 lg:flex lg:items-center lg:gap-x-10">
             <FadeIn className="mx-auto max-w-2xl lg:mx-0 lg:flex-shrink-0 lg:max-w-xl text-center lg:text-left" delay={0.2}>
-              <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+              <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl px-2 sm:px-0">
                 AI-Driven Recruitment Agency{" "}
                 <span className="text-primary">India</span>
               </h1>
-              <p className="mt-6 text-lg leading-8 text-zinc-600">
+              <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-zinc-600 px-4 sm:px-0">
                 Authentic Talent Solutions with Human Touch — from freshers to enterprise leaders.
                 We bridge the gap between technology and talent.
               </p>
@@ -50,11 +50,11 @@ export default function Home() {
         {/* Services Teaser */}
         <Section className="bg-zinc-50">
           <FadeIn>
-            <div className="mx-auto max-w-2xl text-center mb-12">
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <div className="mx-auto max-w-2xl text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-4xl">
                 Authentic Talent Solutions
               </h2>
-              <p className="mt-4 text-lg text-zinc-600">
+              <p className="mt-3 sm:mt-4 text-base sm:text-lg text-zinc-600">
                 We specialize in connecting the right talent with the right opportunities.
               </p>
             </div>
@@ -102,16 +102,16 @@ export default function Home() {
         {/* Industries Teaser */}
         <Section>
           <FadeIn>
-            <div className="mx-auto max-w-2xl text-center mb-12">
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <div className="mx-auto max-w-2xl text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-4xl">
                 Industries We Serve
               </h2>
             </div>
           </FadeIn>
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          <div className="grid grid-cols-2 gap-2 sm:gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
             {["IT & Software", "EdTech", "Banking", "Finance", "Healthcare", "Retail", "Manufacturing", "BPO"].map((industry, index) => (
               <FadeIn key={industry} delay={0.05 * index}>
-                <div className="flex items-center justify-center rounded-lg border border-zinc-200 bg-white p-3 sm:p-4 text-center text-sm font-medium shadow-sm transition-colors hover:bg-zinc-50 h-full min-h-[56px]">
+                <div className="flex items-center justify-center rounded-lg border border-zinc-200 bg-white p-2.5 sm:p-4 text-center text-xs sm:text-sm font-medium shadow-sm transition-colors hover:bg-zinc-50 h-full min-h-[48px] sm:min-h-[56px]">
                   {industry}
                 </div>
               </FadeIn>
@@ -127,11 +127,11 @@ export default function Home() {
         {/* Testimonials Section */}
         <Section className="bg-zinc-50">
           <FadeIn>
-            <div className="mx-auto max-w-2xl text-center mb-12">
-              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <div className="mx-auto max-w-2xl text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-4xl">
                 Testimonials
               </h2>
-              <p className="mt-4 text-lg text-zinc-600">
+              <p className="mt-3 sm:mt-4 text-base sm:text-lg text-zinc-600">
                 Trusted by companies who believe in authentic, human-first hiring.
               </p>
             </div>
@@ -183,10 +183,10 @@ export default function Home() {
         {/* CTA Section */}
         <Section className="bg-primary text-white">
           <FadeIn className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-2xl font-bold tracking-tight text-white sm:text-4xl">
               Ready to Transform Your Hiring?
             </h2>
-            <p className="mt-6 text-lg leading-8 text-zinc-200">
+            <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-7 sm:leading-8 text-zinc-200">
               Join hundreds of companies finding the best talent with Cophil Consulting.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">

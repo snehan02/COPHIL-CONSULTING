@@ -15,7 +15,7 @@ export function Section({
     return (
         <section
             className={cn(
-                padded && "py-16 md:py-24",
+                padded && "py-12 sm:py-16 md:py-24",
                 className
             )}
             {...props}

@@ -23,18 +23,18 @@ export function Navbar() {
                 aria-label="Global"
             >
                 <div className="flex lg:flex-1">
-                    <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3 group">
+                    <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2 sm:gap-3 group">
                         <span className="sr-only">Cophil Consulting</span>
                         <img
                             src="/logo.png"
                             alt="Cophil Consulting Logo"
-                            className="h-10 w-auto transition-transform duration-300 group-hover:scale-110"
+                            className="h-8 sm:h-10 w-auto transition-transform duration-300 group-hover:scale-110"
                         />
                         <span className="relative flex flex-col leading-none">
-                            <span className="text-2xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] animate-[shimmer_3s_linear_infinite]">
+                            <span className="text-xl sm:text-2xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary bg-[length:200%_auto] animate-[shimmer_3s_linear_infinite]">
                                 Cophil
                             </span>
-                            <span className="text-[9px] font-semibold uppercase tracking-[0.25em] text-zinc-400 -mt-0.5">
+                            <span className="text-[7px] sm:text-[9px] font-semibold uppercase tracking-[0.2em] sm:tracking-[0.25em] text-zinc-400 -mt-0.5">
                                 Consulting
                             </span>
                         </span>
@@ -71,8 +71,24 @@ export function Navbar() {
             </nav>
 
             {/* Mobile menu */}
-            <div className={cn("lg:hidden", mobileMenuOpen ? "fixed inset-0 z-[60]" : "hidden")}>
-                <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-zinc-900/10">
+            <div
+                className={cn(
+                    "lg:hidden fixed inset-0 z-[60] transition-opacity duration-300",
+                    mobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                )}
+            >
+                {/* Backdrop */}
+                <div
+                    className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+                    onClick={() => setMobileMenuOpen(false)}
+                />
+
+                <div
+                    className={cn(
+                        "absolute inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 transition-transform duration-300 ease-in-out sm:max-w-sm sm:ring-1 sm:ring-zinc-900/10",
+                        mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+                    )}
+                >
                     <div className="flex items-center justify-between">
                         <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2.5" onClick={() => setMobileMenuOpen(false)}>
                             <img
@@ -92,26 +108,37 @@ export function Navbar() {
 
                         <button
                             type="button"
-                            className="-m-2.5 rounded-md p-2.5 text-zinc-700"
+                            className="-m-2.5 rounded-md p-2.5 text-zinc-700 bg-zinc-50 hover:bg-zinc-100 transition-colors"
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             <span className="sr-only">Close menu</span>
                             <X className="h-6 w-6" aria-hidden="true" />
                         </button>
                     </div>
-                    <div className="mt-6 flow-root">
+                    <div className="mt-10 flow-root">
                         <div className="-my-6 divide-y divide-zinc-500/10">
-                            <div className="space-y-2 py-6">
+                            <div className="space-y-3 py-6">
                                 {navigation.map((item) => (
                                     <Link
                                         key={item.name}
                                         href={item.href}
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-zinc-900 hover:bg-zinc-50"
+                                        className="-mx-3 block rounded-xl px-4 py-3 text-lg font-medium leading-7 text-zinc-900 hover:bg-zinc-50 active:bg-zinc-100 transition-colors"
                                         onClick={() => setMobileMenuOpen(false)}
                                     >
                                         {item.name}
                                     </Link>
                                 ))}
+                            </div>
+                            <div className="py-6">
+                                <Link
+                                    href="https://forms.gle/3wEEaevtSCppRQbj8"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block w-full rounded-full bg-primary px-4 py-3 text-center text-base font-semibold text-white shadow-sm hover:bg-primary-light transition-colors"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                >
+                                    Get Started
+                                </Link>
                             </div>
                         </div>
                     </div>

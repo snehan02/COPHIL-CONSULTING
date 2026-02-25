@@ -29,7 +29,7 @@ export default function ServicesPage() {
         },
         {
             title: "GCC Hiring",
-            tagline: "Future of GCC Hiring — AI + Human Touch",
+            tagline: "Specialized Tech Talent Solutions for Global Capability Centers",
             description: "Specialized tech talent solutions for Global Capability Centers. We source and validate candidates who deliver from Day 1.",
             icon: Globe,
             features: ["AI/ML Specialists", "Software Developers", "DevOps Engineers", "Data Scientists"]
@@ -72,8 +72,8 @@ export default function ServicesPage() {
                                         ))}
                                     </ul>
                                     <div className="mt-auto">
-                                        <Link href="https://forms.gle/3wEEaevtSCppRQbj8" target="_blank" rel="noopener noreferrer">
-                                            <Button variant="outline" className="w-full">Get Started</Button>
+                                        <Link href="/hire-talent">
+                                            <Button variant="outline" className="w-full font-bold">Get Started</Button>
                                         </Link>
                                     </div>
                                 </Card>

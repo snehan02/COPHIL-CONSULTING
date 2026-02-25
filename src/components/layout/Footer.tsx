@@ -29,8 +29,7 @@ export function Footer() {
                         </div>
 
                         <p className="text-sm leading-6 text-zinc-300">
-                            AI-Driven Recruitment for India &amp; GCCs.<br />
-                            Authentic talent with human touch.
+                            AI Driven Recruitment in India for Authentic Talent Sourcing.
                         </p>
                         <div className="flex justify-center sm:justify-start space-x-3">
                             {/* LinkedIn */}

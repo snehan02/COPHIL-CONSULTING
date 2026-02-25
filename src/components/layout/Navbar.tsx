@@ -9,6 +9,7 @@ const navigation = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
     { name: "Services", href: "/services" },
+    { name: "Hire Talent", href: "/hire-talent" },
     { name: "Industries", href: "/industries" },
     { name: "Blog", href: "/blog" },
 ];
@@ -137,9 +138,7 @@ export function Navbar() {
 
                     <div className="mt-8 pt-8 border-t border-zinc-100 dark:border-zinc-800">
                         <Link
-                            href="https://forms.gle/3wEEaevtSCppRQbj8"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href="/hire-talent"
                             className="flex w-full items-center justify-center rounded-2xl bg-primary px-4 py-4 text-center text-lg font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary-light transition-all active:scale-95"
                             onClick={() => setMobileMenuOpen(false)}
                         >

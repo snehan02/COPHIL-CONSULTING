@@ -75,7 +75,7 @@ export default function Home() {
               },
               {
                 title: "GCC Hiring",
-                description: "Future of GCC Hiring — AI + Human Touch. AI/ML specialists, software developers, DevOps engineers & data scientists.",
+                description: "Specialized Tech Talent Solutions for Global Capability Centers. AI/ML specialists, software developers, DevOps engineers & data scientists.",
                 icon: Globe,
                 href: "/services",
               },

@@ -22,6 +22,18 @@ export function Navbar() {
                 className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8"
                 aria-label="Global"
             >
+                {/* Mobile hamburger - Moved to the left */}
+                <div className="flex items-center gap-2 lg:hidden order-first">
+                    <button
+                        type="button"
+                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-zinc-700 hover:text-primary transition-colors focus:outline-none"
+                        onClick={() => setMobileMenuOpen(true)}
+                    >
+                        <span className="sr-only">Open main menu</span>
+                        <Menu className="h-7 w-7" aria-hidden="true" />
+                    </button>
+                </div>
+
                 <div className="flex lg:flex-1">
                     <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2 sm:gap-3 group">
                         <span className="sr-only">Cophil Consulting</span>
@@ -41,19 +53,6 @@ export function Navbar() {
                     </Link>
                 </div>
 
-
-                {/* Mobile hamburger */}
-                <div className="flex items-center gap-2 lg:hidden">
-                    <button
-                        type="button"
-                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-zinc-700"
-                        onClick={() => setMobileMenuOpen(true)}
-                    >
-                        <span className="sr-only">Open main menu</span>
-                        <Menu className="h-6 w-6" aria-hidden="true" />
-                    </button>
-                </div>
-
                 {/* Desktop nav links */}
                 <div className="hidden lg:flex lg:gap-x-8">
                     {navigation.map((item) => (
@@ -70,7 +69,7 @@ export function Navbar() {
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end" />
             </nav>
 
-            {/* Mobile menu */}
+            {/* Mobile menu - Sidebar now on the left */}
             <div
                 className={cn(
                     "lg:hidden fixed inset-0 z-[60] transition-opacity duration-300",
@@ -79,14 +78,14 @@ export function Navbar() {
             >
                 {/* Backdrop */}
                 <div
-                    className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+                    className="absolute inset-0 bg-black/60 backdrop-blur-sm"
                     onClick={() => setMobileMenuOpen(false)}
                 />
 
                 <div
                     className={cn(
-                        "absolute inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 transition-transform duration-300 ease-in-out sm:max-w-sm sm:ring-1 sm:ring-zinc-900/10",
-                        mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+                        "absolute inset-y-0 left-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 transition-transform duration-300 ease-in-out sm:max-w-sm sm:ring-1 sm:ring-zinc-900/10",
+                        mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
                     )}
                 >
                     <div className="flex items-center justify-between">
@@ -108,7 +107,7 @@ export function Navbar() {
 
                         <button
                             type="button"
-                            className="-m-2.5 rounded-md p-2.5 text-zinc-700 bg-zinc-50 hover:bg-zinc-100 transition-colors"
+                            className="-m-2.5 rounded-md p-2.5 text-zinc-700 bg-zinc-50 hover:bg-zinc-100 transition-colors focus:outline-none"
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             <span className="sr-only">Close menu</span>

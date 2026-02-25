@@ -36,6 +36,21 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${openSans.variable} ${playfair.variable} antialiased bg-background text-foreground font-sans`}
       >
+        {/* Background Watermarks */}
+        <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden opacity-[0.07] select-none">
+          <img
+            src="/logo.png"
+            alt=""
+            className="absolute -right-24 -bottom-24 w-[500px] h-auto grayscale rotate-12"
+            aria-hidden="true"
+          />
+          <img
+            src="/logo.png"
+            alt=""
+            className="absolute -left-32 top-1/4 w-[400px] h-auto grayscale -rotate-12"
+            aria-hidden="true"
+          />
+        </div>
         {children}
       </body>
     </html>

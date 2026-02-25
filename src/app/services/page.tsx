@@ -54,7 +54,7 @@ export default function ServicesPage() {
                         {services.map((service, index) => {
                             const Icon = service.icon;
                             return (
-                                <Card key={index} className="flex flex-col p-6 sm:p-8" variant="default">
+                                <Card key={index} className="flex flex-col p-6 sm:p-8 bg-white shadow-md border-zinc-200" variant="default">
                                     <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
                                         <Icon className="h-6 w-6" />
                                     </div>

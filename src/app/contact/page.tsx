@@ -46,7 +46,7 @@ export default function ContactPage() {
                 <Section className="py-12">
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                         <div className="mx-auto grid max-w-2xl grid-cols-1 gap-6 text-center sm:grid-cols-2 lg:max-w-none lg:grid-cols-2">
-                            <Card className="p-6 sm:p-8">
+                            <Card className="p-6 sm:p-8 bg-white shadow-md border-zinc-200">
                                 <h3 className="text-lg font-semibold text-foreground">Phone</h3>
                                 <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
                                     Available Mon-Fri, 9am-6pm IST
@@ -55,7 +55,7 @@ export default function ContactPage() {
                                     <a href="tel:+917972820459" className="hover:underline">+91-7972820459</a>
                                 </p>
                             </Card>
-                            <Card className="p-6 sm:p-8">
+                            <Card className="p-6 sm:p-8 bg-white shadow-md border-zinc-200">
                                 <h3 className="text-lg font-semibold text-foreground">Email</h3>
                                 <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
                                     We usually reply within 24 hours
@@ -70,7 +70,7 @@ export default function ContactPage() {
 
                 <Section>
                     <div className="mx-auto max-w-xl">
-                        <Card className="p-6 sm:p-8">
+                        <Card className="p-6 sm:p-8 bg-white shadow-md border-zinc-200 text-left">
                             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
                                 <div>
                                     <label htmlFor="name" className="block text-sm font-semibold leading-6 text-foreground">

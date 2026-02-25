@@ -83,7 +83,7 @@ export default function Home() {
               const Icon = service.icon;
               return (
                 <FadeIn key={service.title} delay={0.15 * (index + 1)}>
-                  <Card variant="default" className="p-6 sm:p-8 hover:-translate-y-1 h-full bg-white dark:bg-zinc-900/80 border-zinc-200 dark:border-zinc-800 shadow-md sm:shadow-sm">
+                  <Card className="p-6 sm:p-8 h-full">
                     <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary dark:text-orange">
                       <Icon className="h-6 w-6" />
                     </div>
@@ -111,7 +111,7 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-2 sm:gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
             {["IT & Software", "EdTech", "Banking", "Finance", "Healthcare", "Retail", "Manufacturing", "BPO"].map((industry, index) => (
               <FadeIn key={industry} delay={0.05 * index}>
-                <div className="flex items-center justify-center rounded-lg border border-zinc-200 bg-white p-2.5 sm:p-4 text-center text-xs sm:text-sm font-medium shadow-sm transition-colors hover:bg-zinc-50 h-full min-h-[48px] sm:min-h-[56px]">
+                <div className="flex items-center justify-center rounded-lg border border-zinc-200 bg-white p-2.5 sm:p-4 text-center text-xs sm:text-sm font-bold shadow-lg transition-all hover:bg-zinc-50 hover:-translate-y-1 h-full min-h-[48px] sm:min-h-[56px]">
                   {industry}
                 </div>
               </FadeIn>
@@ -152,7 +152,7 @@ export default function Home() {
               }
             ].map((testimonial, index) => (
               <FadeIn key={testimonial.author} delay={0.2 * (index + 1)}>
-                <Card variant="default" className="p-6 sm:p-8 h-full flex flex-col justify-between bg-white dark:bg-zinc-900/80 border-zinc-200 dark:border-zinc-800 shadow-md hover:shadow-lg transition-shadow duration-300">
+                <Card className="p-6 sm:p-8 h-full flex flex-col justify-between">
                   <div>
                     <div className="flex gap-1 mb-4">
                       {[1, 2, 3, 4, 5].map((i) => (

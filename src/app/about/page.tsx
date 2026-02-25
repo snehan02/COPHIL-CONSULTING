@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Section } from "@/components/shared/Section";
+import { Card } from "@/components/shared/Card";
 
 export const metadata = {
     title: "About Us | Cophil Consulting",
@@ -25,7 +26,7 @@ export default function AboutPage() {
                 <Section className="bg-zinc-50 border-t border-zinc-100">
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2 max-w-5xl mx-auto">
                         {/* Vision */}
-                        <div className="rounded-2xl border border-zinc-200 bg-white shadow-md p-6 sm:p-8 text-center hover:shadow-lg transition-all duration-300">
+                        <Card className="p-6 sm:p-8 text-center">
                             <div className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 mb-5 mx-auto">
                                 <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.964-7.178z" />
@@ -39,10 +40,10 @@ export default function AboutPage() {
                                 and continuously evolving to meet the dynamic needs of the workforce, while creating opportunities that
                                 empower individuals and businesses alike.
                             </p>
-                        </div>
+                        </Card>
 
                         {/* Mission */}
-                        <div className="rounded-2xl border border-zinc-200 bg-white shadow-md p-6 sm:p-8 text-center hover:shadow-lg transition-all duration-300">
+                        <Card className="p-6 sm:p-8 text-center">
                             <div className="inline-flex items-center justify-center h-12 w-12 rounded-full bg-primary/10 mb-5 mx-auto">
                                 <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
@@ -56,7 +57,7 @@ export default function AboutPage() {
                                 industry knowledge, personal approach and building relationships, we strive to make the hiring process
                                 seamless, transparent, and impactful.
                             </p>
-                        </div>
+                        </Card>
                     </div>
                 </Section>
 

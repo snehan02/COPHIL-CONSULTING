@@ -45,7 +45,7 @@ export default function BlogPage() {
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                         {blogPosts.map((post) => (
                             <Link key={post.slug} href={`/blog/${post.slug}`} className="group block h-full">
-                                <div className="h-full rounded-2xl border border-zinc-200 bg-zinc-50 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col overflow-hidden">
+                                <div className="h-full rounded-2xl border border-zinc-200 bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col overflow-hidden">
                                     {/* Subtle top accent bar in primary colour only */}
                                     <div className="h-1.5 bg-primary w-full" />
                                     <div className="p-6 flex flex-col flex-1">

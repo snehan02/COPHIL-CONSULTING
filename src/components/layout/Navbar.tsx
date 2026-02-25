@@ -91,7 +91,7 @@ export function Navbar() {
 
                 <div
                     className={cn(
-                        "absolute inset-y-0 left-0 z-50 w-[280px] sm:w-[350px] overflow-y-auto bg-white dark:bg-zinc-900 px-6 py-6 transition-transform duration-300 ease-in-out shadow-2xl",
+                        "absolute inset-y-0 left-0 z-50 w-[280px] sm:w-[350px] overflow-y-auto bg-white px-6 py-6 transition-transform duration-300 ease-in-out shadow-2xl",
                         mobileMenuOpen ? "translate-x-0" : "-translate-x-full"
                     )}
                 >

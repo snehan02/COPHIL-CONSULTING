@@ -103,7 +103,7 @@ export function Navbar() {
                                 className="h-8 w-auto"
                             />
                             <div className="flex flex-col leading-none">
-                                <span className="text-xl font-black tracking-tight text-primary dark:text-white">
+                                <span className="text-xl font-black tracking-tight text-primary">
                                     Cophil
                                 </span>
                                 <span className="text-[8px] font-semibold uppercase tracking-[0.25em] text-zinc-400 -mt-0.5">
@@ -114,7 +114,7 @@ export function Navbar() {
 
                         <button
                             type="button"
-                            className="rounded-xl p-2 text-zinc-700 dark:text-zinc-300 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors focus:outline-none"
+                            className="rounded-xl p-2 text-zinc-700 bg-zinc-100 hover:bg-zinc-200 transition-colors focus:outline-none"
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             <span className="sr-only">Close menu</span>

@@ -6,6 +6,7 @@ import { Button } from "@/components/shared/Button";
 import { Card } from "@/components/shared/Card";
 import { Section } from "@/components/shared/Section";
 import { FadeIn } from "@/components/shared/FadeIn";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
@@ -48,49 +49,63 @@ export default function Home() {
         </div>
 
         {/* Services Teaser */}
-        <Section className="bg-zinc-50">
+        <Section className="bg-zinc-50/50 dark:bg-zinc-950/50">
           <FadeIn>
-            <div className="mx-auto max-w-2xl text-center mb-8 sm:mb-12">
-              <h2 className="text-2xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <div className="mx-auto max-w-2xl text-center mb-12 sm:mb-16">
+              <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
                 Authentic Talent Solutions
               </h2>
-              <p className="mt-3 sm:mt-4 text-base sm:text-lg text-zinc-600">
-                We specialize in connecting the right talent with the right opportunities.
+              <p className="mt-4 text-base sm:text-lg text-zinc-600 dark:text-zinc-400 max-w-xl mx-auto">
+                We specialize in connecting the right talent with the right opportunities using AI-driven precision.
               </p>
             </div>
           </FadeIn>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 title: "IT Staffing & Recruitment",
                 description: "Specialized sourcing for Web & AI Developers. Best IT Staffing Partner with Human Touch.",
                 icon: Code,
                 href: "/services",
+                color: "bg-blue-500/10 text-blue-600 dark:text-blue-400 dark:bg-blue-500/20",
               },
               {
                 title: "Educational Services",
                 description: "Fresher Tech Hiring India + Intern Hiring Support for Startups & Enterprises.",
                 icon: Users,
                 href: "/services",
+                color: "bg-teal-500/10 text-teal-600 dark:text-teal-400 dark:bg-teal-500/20",
               },
               {
                 title: "GCC Hiring",
                 description: "Future of GCC Hiring — AI + Human Touch. AI/ML specialists, software developers, DevOps engineers & data scientists.",
                 icon: Globe,
                 href: "/services",
+                color: "bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 dark:bg-indigo-500/20",
               },
             ].map((service, index) => {
               const Icon = service.icon;
               return (
-                <FadeIn key={service.title} delay={0.15 * (index + 1)}>
-                  <Card className="p-6 sm:p-8 hover:-translate-y-1 h-full">
-                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                      <Icon className="h-6 w-6" />
+                <FadeIn key={service.title} delay={0.1 * (index + 1)}>
+                  <Card variant="premium" className="p-8 sm:p-10 flex flex-col items-start text-left group">
+                    <div className={cn(
+                      "mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3",
+                      service.color
+                    )}>
+                      <Icon className="h-7 w-7" />
                     </div>
-                    <h3 className="mb-2 text-xl font-bold">{service.title}</h3>
-                    <p className="mb-4 text-zinc-600">{service.description}</p>
-                    <Link href={service.href} className="text-primary hover:text-primary-light font-medium inline-flex items-center">
-                      Learn more <ArrowRight className="ml-1 h-3 w-3" />
+                    <h3 className="mb-3 text-2xl font-bold text-foreground group-hover:text-primary dark:group-hover:text-primary-light transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="mb-6 text-base leading-relaxed text-zinc-600 dark:text-zinc-400 flex-grow">
+                      {service.description}
+                    </p>
+                    <Link
+                      href={service.href}
+                      className="group/link inline-flex items-center gap-2 text-primary dark:text-primary-light font-bold hover:gap-3 transition-all underline-offset-4 hover:underline"
+                    >
+                      <span>Explore Service</span>
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover/link:translate-x-1" />
                     </Link>
                   </Card>
                 </FadeIn>

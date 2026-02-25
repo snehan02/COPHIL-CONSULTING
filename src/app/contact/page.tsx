@@ -45,23 +45,33 @@ export default function ContactPage() {
 
                 <Section className="py-12">
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-                        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-6 text-center sm:grid-cols-2 lg:max-w-none lg:grid-cols-2">
-                            <Card className="p-6 sm:p-8">
-                                <h3 className="text-lg font-semibold text-foreground">Phone</h3>
-                                <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-8 text-center sm:grid-cols-2 lg:max-w-none lg:grid-cols-2">
+                            <Card variant="premium" className="p-8 sm:p-10 flex flex-col items-center">
+                                <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-600 dark:text-blue-400">
+                                    <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    </svg>
+                                </div>
+                                <h3 className="text-xl font-bold text-foreground">Phone</h3>
+                                <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
                                     Available Mon-Fri, 9am-6pm IST
                                 </p>
-                                <p className="mt-4 text-lg sm:text-xl font-bold text-primary break-words">
-                                    <a href="tel:+917972820459" className="hover:underline">+91-7972820459</a>
+                                <p className="mt-6 text-xl sm:text-2xl font-bold text-primary dark:text-primary-light break-all">
+                                    <a href="tel:+917972820459" className="hover:underline transition-all">+91-7972820459</a>
                                 </p>
                             </Card>
-                            <Card className="p-6 sm:p-8">
-                                <h3 className="text-lg font-semibold text-foreground">Email</h3>
-                                <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                            <Card variant="premium" className="p-8 sm:p-10 flex flex-col items-center">
+                                <div className="mb-6 inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-teal-500/10 text-teal-600 dark:text-teal-400">
+                                    <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <h3 className="text-xl font-bold text-foreground">Email</h3>
+                                <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
                                     We usually reply within 24 hours
                                 </p>
-                                <p className="mt-4 text-base sm:text-xl font-bold text-primary break-words px-2">
-                                    <a href="mailto:support@cophilconsulting.com" className="hover:underline">support@cophilconsulting.com</a>
+                                <p className="mt-6 text-lg sm:text-xl font-bold text-primary dark:text-primary-light break-all px-2">
+                                    <a href="mailto:support@cophilconsulting.com" className="hover:underline transition-all">support@cophilconsulting.com</a>
                                 </p>
                             </Card>
                         </div>

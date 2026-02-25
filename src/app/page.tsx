@@ -27,7 +27,7 @@ export default function Home() {
               </p>
               <div className="mt-10 flex items-center justify-center lg:justify-start gap-x-6">
                 <Button size="lg" className="rounded-full">
-                  Find Jobs <ArrowRight className="ml-2 h-4 w-4" />
+                  Find Jobs
                 </Button>
               </div>
             </FadeIn>

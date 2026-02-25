@@ -127,7 +127,7 @@ export function Navbar() {
                             <Link
                                 key={item.name}
                                 href={item.href}
-                                className="flex items-center rounded-2xl px-4 py-4 text-xl font-bold text-zinc-900 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all active:scale-95"
+                                className="flex items-center rounded-2xl px-4 py-4 text-xl font-bold text-zinc-900 hover:bg-zinc-100 transition-all active:scale-95"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 {item.name}

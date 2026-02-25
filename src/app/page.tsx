@@ -161,7 +161,7 @@ export default function Home() {
                         </svg>
                       ))}
                     </div>
-                    <p className="text-base sm:text-lg italic text-zinc-700 dark:text-zinc-300 mb-5 leading-relaxed">
+                    <p className="text-base sm:text-lg italic text-zinc-800 mb-5 leading-relaxed">
                       &ldquo;{testimonial.quote}&rdquo;
                     </p>
                   </div>

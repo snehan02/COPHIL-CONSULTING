@@ -83,13 +83,13 @@ export default function Home() {
               const Icon = service.icon;
               return (
                 <FadeIn key={service.title} delay={0.15 * (index + 1)}>
-                  <Card className="p-6 sm:p-8 hover:-translate-y-1 h-full">
-                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                  <Card variant="default" className="p-6 sm:p-8 hover:-translate-y-1 h-full bg-zinc-100 dark:bg-zinc-900/80 border-zinc-200 dark:border-zinc-800">
+                    <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary dark:text-orange">
                       <Icon className="h-6 w-6" />
                     </div>
-                    <h3 className="mb-2 text-xl font-bold">{service.title}</h3>
-                    <p className="mb-4 text-zinc-600">{service.description}</p>
-                    <Link href={service.href} className="text-primary hover:text-primary-light font-medium inline-flex items-center">
+                    <h3 className="mb-2 text-xl font-bold text-foreground">{service.title}</h3>
+                    <p className="mb-4 text-zinc-600 dark:text-zinc-400">{service.description}</p>
+                    <Link href={service.href} className="text-primary hover:text-primary-light dark:text-orange font-medium inline-flex items-center">
                       Learn more <ArrowRight className="ml-1 h-3 w-3" />
                     </Link>
                   </Card>
@@ -152,7 +152,7 @@ export default function Home() {
               }
             ].map((testimonial, index) => (
               <FadeIn key={testimonial.author} delay={0.2 * (index + 1)}>
-                <Card className="p-6 sm:p-8 h-full flex flex-col justify-between border border-zinc-200 hover:shadow-lg transition-shadow duration-300">
+                <Card variant="default" className="p-6 sm:p-8 h-full flex flex-col justify-between bg-zinc-100 dark:bg-zinc-900/80 border-zinc-200 dark:border-zinc-800 hover:shadow-lg transition-shadow duration-300">
                   <div>
                     <div className="flex gap-1 mb-4">
                       {[1, 2, 3, 4, 5].map((i) => (
@@ -161,17 +161,17 @@ export default function Home() {
                         </svg>
                       ))}
                     </div>
-                    <p className="text-base sm:text-lg italic text-zinc-700 mb-5 leading-relaxed">
+                    <p className="text-base sm:text-lg italic text-zinc-700 dark:text-zinc-300 mb-5 leading-relaxed">
                       &ldquo;{testimonial.quote}&rdquo;
                     </p>
                   </div>
-                  <div className="flex items-center gap-3 pt-4 border-t border-zinc-100">
-                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm flex-shrink-0">
+                  <div className="flex items-center gap-3 pt-4 border-t border-zinc-100 dark:border-zinc-800">
+                    <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary dark:text-orange font-bold text-sm flex-shrink-0">
                       {testimonial.author.charAt(0)}
                     </div>
                     <div>
                       <h4 className="font-bold text-foreground">{testimonial.author}</h4>
-                      <p className="text-sm text-zinc-500">{testimonial.role}, {testimonial.company}</p>
+                      <p className="text-sm text-zinc-500 dark:text-zinc-400">{testimonial.role}, {testimonial.company}</p>
                     </div>
                   </div>
                 </Card>

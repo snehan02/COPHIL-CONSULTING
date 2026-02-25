@@ -50,39 +50,30 @@ export default function ServicesPage() {
                 </Section>
 
                 <Section>
-                    <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
                         {services.map((service, index) => {
                             const Icon = service.icon;
-                            const colors = [
-                                "bg-blue-500/10 text-blue-600 dark:text-blue-400 dark:bg-blue-500/20",
-                                "bg-teal-500/10 text-teal-600 dark:text-teal-400 dark:bg-teal-500/20",
-                                "bg-indigo-500/10 text-indigo-600 dark:text-indigo-400 dark:bg-indigo-500/20"
-                            ];
                             return (
-                                <Card key={index} variant="premium" className="flex flex-col p-8 sm:p-10 group transition-all duration-500">
-                                    <div className={`mb-8 inline-flex h-16 w-16 items-center justify-center rounded-2xl transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 ${colors[index % colors.length]}`}>
-                                        <Icon className="h-8 w-8" />
+                                <Card key={index} className="flex flex-col p-6 sm:p-8" variant="default">
+                                    <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                                        <Icon className="h-6 w-6" />
                                     </div>
-                                    <h3 className="text-2xl sm:text-3xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">{service.title}</h3>
-                                    <p className="mt-2 text-sm font-bold tracking-wide uppercase text-primary dark:text-primary-light">
-                                        {service.tagline}
-                                    </p>
-                                    <p className="mt-6 flex-auto text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+                                    <h3 className="text-2xl font-bold text-foreground">{service.title}</h3>
+                                    <p className="mt-2 text-sm font-semibold text-primary">{service.tagline}</p>
+                                    <p className="mt-4 flex-auto text-base leading-7 text-zinc-600">
                                         {service.description}
                                     </p>
-                                    <ul className="mt-8 space-y-4 mb-10">
+                                    <ul className="mt-8 space-y-3 mb-8">
                                         {service.features.map((feature) => (
-                                            <li key={feature} className="flex items-center gap-3 text-sm font-medium text-zinc-700 dark:text-zinc-300">
-                                                <div className="h-2 w-2 rounded-full bg-primary flex-shrink-0" />
+                                            <li key={feature} className="flex gap-3 text-sm text-zinc-600">
+                                                <CheckCircle2 className="h-5 w-5 flex-none text-primary" />
                                                 {feature}
                                             </li>
                                         ))}
                                     </ul>
                                     <div className="mt-auto">
                                         <Link href="https://forms.gle/3wEEaevtSCppRQbj8" target="_blank" rel="noopener noreferrer">
-                                            <Button variant="outline" className="w-full rounded-xl border-2 hover:bg-primary hover:text-white transition-all duration-300 group-hover:shadow-lg">
-                                                Request Quote
-                                            </Button>
+                                            <Button variant="outline" className="w-full">Get Started</Button>
                                         </Link>
                                     </div>
                                 </Card>

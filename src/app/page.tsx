@@ -26,9 +26,11 @@ export default function Home() {
                 We bridge the gap between technology and talent.
               </p>
               <div className="mt-10 flex items-center justify-center lg:justify-start gap-x-6">
-                <Button size="lg" className="rounded-full">
-                  Find Jobs
-                </Button>
+                <Link href="/hire-talent">
+                  <Button size="lg" className="rounded-full">
+                    Hire Talent
+                  </Button>
+                </Link>
               </div>
             </FadeIn>
 
@@ -46,6 +48,58 @@ export default function Home() {
             </FadeIn>
           </div>
         </div>
+
+        {/* Stats Section */}
+        <Section className="py-16 md:py-24 bg-zinc-50 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+            <div className="absolute -top-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl"></div>
+            <div className="absolute top-1/2 -right-24 w-72 h-72 bg-primary/5 rounded-full blur-3xl"></div>
+          </div>
+          <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+              <FadeIn delay={0.1}>
+                <Card className="p-8 text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-white relative overflow-hidden group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
+                  <div className="flex flex-col gap-y-3">
+                    <dd className="text-4xl sm:text-5xl font-black tracking-tight text-zinc-900 group-hover:text-primary transition-colors duration-300">1,000<span className="text-primary">+</span></dd>
+                    <dt className="text-sm sm:text-base font-semibold leading-6 text-zinc-500 uppercase tracking-wider">CVs Screened Daily</dt>
+                  </div>
+                </Card>
+              </FadeIn>
+              <FadeIn delay={0.2}>
+                <Card className="p-8 text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-white relative overflow-hidden group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <div className="flex flex-col gap-y-3">
+                    <dd className="text-4xl sm:text-5xl font-black tracking-tight text-zinc-900 group-hover:text-primary transition-colors duration-300">99<span className="text-primary">+</span></dd>
+                    <dt className="text-sm sm:text-base font-semibold leading-6 text-zinc-500 uppercase tracking-wider">Successful Placements</dt>
+                  </div>
+                </Card>
+              </FadeIn>
+              <FadeIn delay={0.3}>
+                <Card className="p-8 text-center border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-white relative overflow-hidden group">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
+                    <Users className="w-8 h-8" />
+                  </div>
+                  <div className="flex flex-col gap-y-3">
+                    <dd className="text-4xl sm:text-5xl font-black tracking-tight text-zinc-900 group-hover:text-primary transition-colors duration-300">10<span className="text-primary">+</span></dd>
+                    <dt className="text-sm sm:text-base font-semibold leading-6 text-zinc-500 uppercase tracking-wider">Recruiters on Team</dt>
+                  </div>
+                </Card>
+              </FadeIn>
+            </div>
+          </div>
+        </Section>
 
         {/* Services Teaser */}
         <Section className="bg-zinc-50">
@@ -89,7 +143,7 @@ export default function Home() {
                     </div>
                     <h3 className="mb-2 text-xl font-bold text-foreground">{service.title}</h3>
                     <p className="mb-4 text-zinc-600 dark:text-zinc-400">{service.description}</p>
-                    <Link href={service.href} className="text-primary hover:text-primary-light dark:text-orange font-medium inline-flex items-center">
+                    <Link href={service.href ?? '/services'} className="text-primary hover:text-primary-light dark:text-orange font-medium inline-flex items-center">
                       Learn more <ArrowRight className="ml-1 h-3 w-3" />
                     </Link>
                   </Card>

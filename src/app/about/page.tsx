@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Section } from "@/components/shared/Section";
 import { Card } from "@/components/shared/Card";
+import { FadeIn } from "@/components/shared/FadeIn";
 
 export const metadata = {
     title: "About Us | Cophil Consulting",
@@ -83,6 +84,19 @@ export default function AboutPage() {
                     </div>
                 </Section>
 
+                {/* Why Cophil */}
+                <Section className="py-16 bg-white border-t border-zinc-100">
+                    <div className="mx-auto max-w-4xl text-center">
+                        <FadeIn>
+                            <h2 className="text-3xl font-bold tracking-tight text-foreground mb-8">Why Cophil?</h2>
+                            <div className="p-8 bg-zinc-50 rounded-2xl border border-zinc-100 shadow-sm relative">
+                                <p className="text-xl sm:text-2xl italic font-medium text-zinc-800 leading-relaxed max-w-3xl mx-auto">
+                                    &ldquo;Led by an engineer-turned-HR leader who's been on both sides of the table — Abhijeet built Cophil so companies never have to compromise on quality, speed, or authenticity.&rdquo;
+                                </p>
+                            </div>
+                        </FadeIn>
+                    </div>
+                </Section>
 
             </main>
             <Footer />
